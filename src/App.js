@@ -1,23 +1,31 @@
 import logo from './logo.svg';
 import './App.css';
 
+
 function App() {
+  const list = [
+    {
+      fisrtname: "Amjad",
+      lastname: "Ali",
+      age: "23"
+    }
+  ]
+  const username = "Ali"
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <h1>Lareb Appa Khati hai Pappa {username === "Amjad" ? username : "Kuch Nhi"}</h1>
+      <h1>Direct Expression :  {6*3}</h1>
+      
+      {list.map((listItem) => {
+        return (
+          <>
+          <h1>F/Name: {listItem.fisrtname}</h1>
+          <h1>L/Name: {listItem.lastname}</h1>
+          <h1>Age: {listItem.age}</h1>
+          </>
+        )
+      })}
+      
     </div>
   );
 }
