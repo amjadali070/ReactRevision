@@ -1,20 +1,28 @@
 import './App.css';
 import Tool from "./Components/Tool" 
 import Time from './Components/Time';
-
+import Counter from './Components/Counter';
+import ExampleComponent from './DidMount';
+import MyForm from './Components/MyForm';
 
 
 // Props
 const name ="Amjad"
-const tool= "Figma"
+const tool= "EaseWeb"
 function App() {
   return (
     <div className="App">
       <Tool name={name} tool={tool}/>
       <Time/>
+      <Counter/>
+      <ExampleComponent/>
+      <MyForm/>
     </div>
   )
 }
+
+
+
 
 
   // function App() {
